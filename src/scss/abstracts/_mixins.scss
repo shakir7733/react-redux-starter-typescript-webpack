@@ -1,0 +1,155 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin flexCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content};
+    &:-moz-placeholder           {@content};
+    &::-moz-placeholder          {@content};
+    &:-ms-input-placeholder      {@content} ; 
+}
+@mixin placeholderText {
+    color: rgba(#333,.3);
+    // font-family: $font-stack;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.025em ;
+    font-size: $default-fontSize;
+}
+
+
+@mixin overlayBefore($color){
+    &:before{
+        content:'';
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background-color: $color;
+    }
+}
+@mixin overlay($color){
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };    //600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content };     //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+}
+
+@mixin customScroll{
+    /* width */
+    ::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #9F9F9F; 
+    border-radius:8px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #666; 
+  }
+}
+
+@mixin dropDownContent {
+    position: absolute;
+    width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    // top: 60px;
+    // left: -110px;
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    border-radius: 4px;
+    transition: 0.2s all ease-in-out;
+    top: 35px;
+    right: -5px;
+    // &:after {
+    //   content: "";
+    //   box-sizing: border-box;
+    //   position: absolute;
+    //   height: 15px;
+    //   width: 15px;
+    //   z-index: -1;
+    //   background-color: #fff;
+    //   border: 1px solid #e5eaed;
+    //   border-bottom: 1px solid transparent;
+    //   // border-left: 1px solid transparent;
+    //   border-right: 1px solid transparent;
+    //   transform: rotate(45deg);
+    //   top: -8px;
+    //   left: 75%;
+    // }
+  }
+  

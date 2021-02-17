@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+  "baseUrl": "src",
+  "paths": {
+    "components/*": [ "./components/*"],
+    "scenes/*": [ "./scenes/*"],
+    "ts/*": [ "./ts/*"],
+    "helpers/*": [ "./helpers/*"],
+    "constants/*": [ "./constants/*"],
+    "isEmpty": [ "./helpers/isEmpty.ts"],
+    "assets/*": [ "./assets/*"],
+    "src/*": [ "./*"],
+    "navigations/*": [ "./navigations/*"],
+    "store/*": [ "./store/*"],
+    "services/*": [ "./services/*"],
+    "selectors/*": [ "./selectors/*"],
+    "utils/*": [ "./utils/*"],
+    "environment/*": [ "./environment/*"],
+    }
+  }
+}

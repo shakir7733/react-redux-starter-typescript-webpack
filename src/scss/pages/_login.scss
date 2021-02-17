@@ -1,0 +1,92 @@
+.section{
+    &-login{
+        background-color: #f3f3f3;
+        width: 100vw;
+        height: 100vh;
+        height: 100vh;
+        position: relative;
+    }
+}
+.login{
+    &-container{
+        width: 30%;
+        margin: 0 auto;
+        // padding: 2rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #{$color-white};
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    &-header{
+        width: 100%;
+        font-size: 2rem;
+        padding:2rem;
+        vertical-align: middle;
+        text-align: center;
+        background-color: #{$color-primary-light-3};
+    }
+    &-heading{
+        color:#{$color-grey-light};
+    }
+    &-form{
+        padding: 3rem 4rem;
+        text-align: center;
+        &__group{
+            width: 100%;
+            margin:0 auto;
+
+            label{
+                display: block;
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+                color:#666;
+                text-align: left;
+            }
+        }
+        &__input{
+            width: 100%;
+            outline: none;
+            border: 1px solid #cacaca;
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            background: #fff;
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 .5rem 1rem rgba(#000, .1);
+                border-bottom: 2px solid #c3c3c3;
+
+            }
+    
+            &:focus:invalid {
+                border-bottom: 2px solid #f41;
+            }
+            &:focus:valid {
+                border-bottom: 2px solid rgb(79, 175, 53);
+            }
+    
+            &::-webkit-input-placeholder {
+                color: #646464;
+            }
+        }
+    }
+
+    &-card{
+        background-image:  linear-gradient(to right bottom, #666, #444);
+
+        img{
+            border:25px solid #fafafa;
+        }
+        h4{
+            margin:0;
+        }
+    }
+    &-back{
+
+    }
+}
+

@@ -1,0 +1,26 @@
+
+@import "scss/abstracts/variables";
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/function";
+
+@import "scss/base/base";
+@import "scss/base/animations";
+@import "scss/base/typography";
+@import "scss/base/utils";
+
+@import "scss/component/form";
+@import "scss/component/popup";
+@import "scss/component/dropdown";
+@import "scss/component/button";
+@import "scss/component/card";
+@import "scss/component/toast";
+@import "scss/component/loading";
+
+
+
+@import "scss/layout/header";
+@import "scss/layout/sidebar";
+@import "scss/layout/grid";
+@import "scss/layout/footer";
+
+@import "scss/pages/home";

@@ -1,0 +1,59 @@
+.section-review{
+
+
+    &_form{
+        padding:1rem 7rem;
+
+        @include respond(phone) {
+            padding:1rem;
+            .card-panel{
+                padding: 1rem 0.25rem;
+                text-align: center;
+
+                .row{
+                    padding: 1rem 0.5rem !important;
+                }
+            }
+        }
+        @include respond(smTab) {
+            padding:1rem 0.5rem;
+            .col.m9{
+                width: 60% !important;
+            }
+            .col.m3{
+                width: 40% !important;
+            }
+        }
+        @include respond(tab) {
+            padding:1rem 2rem;
+            .col.m9{
+                width: 60% !important;
+            }
+            .col.m3{
+                width: 40% !important;
+            }
+        }
+        @include respond(lgTab) {
+            padding:1rem 4rem;
+            .col.m9{
+                width: 65% !important;
+            }
+            .col.m3{
+                width: 35% !important;
+            }
+        }
+        @include respond(desktop) {
+            padding:1rem 7rem;
+        }
+        @include respond(bgDesktop) {
+            padding:1rem 10rem;
+        }
+
+    }
+
+    &__title{
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #e4e4e4;
+    }
+}
